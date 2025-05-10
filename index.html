@@ -1,98 +1,296 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>keerthika's Portfolio</title>
+  <title>Keerthika's Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #000000, #0000ff);
+      color: #ffffff;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      background: transparent;
+      padding: 20px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin-left: 25px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 80px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #home {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+
+    #home img {
+      width: 400px;
+      max-width: 100%;
+      border-radius: 15px;
+      margin-left: 800px;
+      box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
+    }
+
+    .main-heading {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #00ffff;
+    }
+
+    .sub-heading {
+      font-size: 2.5rem;
+      margin-top: 15px;
+      color: #ffffff;
+    }
+
+    .description-heading {
+      font-size: 1.5rem;
+      margin-top: 15px;
+      color: #ffffff;
+      font-weight: 300;
+    }
+
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 15px;
+      border: 1px solid #ffffff;
+    }
+
+    th {
+      background-color: #1e1e3f;
+    }
+
+    td {
+      background-color: #2c2c54;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e1e3f;
+      font-size: 1rem;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      margin: 10px 0;
+      width: 300px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    input[type="submit"] {
+      background-color: #00ffff;
+      color: #000000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #00cccc;
+    }
+
+    .home-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .home-text {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        font-size: 1rem;
+        padding: 10px;
+      }
+
+      nav a {
+        margin-left: 15px;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      .main-heading {
+        font-size: 2.5rem;
+      }
+
+      .sub-heading {
+        font-size: 1.8rem;
+      }
+
+      .description-heading {
+        font-size: 1.1rem;
+      }
+
+      #home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      #home img {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 80%;
+      }
+
+      .home-text {
+        max-width: 100%;
+      }
+
+      table {
+        width: 100%;
+        font-size: 0.9rem;
+      }
+
+      input, textarea {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navigation Menu -->
-  <h1><center>keerthika's Portfolio</center></h1>
-  <center>
-    <a href="#home">Home</a>&nbsp;&nbsp;&nbsp;
-    <a href="#about">About</a>&nbsp;&nbsp;&nbsp;
-    <a href="#projects">Projects</a>&nbsp;&nbsp;&nbsp;
-    <a href="#skills">Skills</a>&nbsp;&nbsp;&nbsp;
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
-  </center>
+  </nav>
 
-  <hr>
+  <section id="home">
+    <div class="home-content">
+      <div class="home-text">
+        <h1 class="main-heading">Hello, it's me</h1>
+        <h2 class="sub-heading">Keerthika</h2>
+        <p class="description-heading">I am a Frontend Developer</p>
+      </div>
+      <img src="/image.png" alt="Keerthika">
+    </div>
+  </section>
 
-  <!-- Home Section -->
-  <h2 id="home">Home</h2>
-  <p>Hello! It's me <strong>Keerthika</strong>. Welcome to my personal portfolio. I'm excited to share my journey and work with you.</p>
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="max-width: 700px; font-size: 1.2rem;">I am a 2nd-year B.Tech student from a reputed college. I am passionate about web development and machine learning. I enjoy building real-time applications, exploring new technologies, and applying them in practical projects.</p>
+  </section>
 
-  <hr>
+  <section id="projects">
+    <h2>Projects</h2>
+    <table>
+      <tr>
+        <th>Project Name</th>
+        <th>Description</th>
+        <th>Technology Used</th>
+      </tr>
+      <tr>
+        <td>Market Price Tracker</td>
+        <td>A real-time tracker that helps users monitor market prices.</td>
+        <td>MERN (MongoDB, Express.js, React, Node.js)</td>
+      </tr>
+      <tr>
+        <td>GameVerse</td>
+        <td>A platform where multiple interactive games are organized on a single page.</td>
+        <td>Full Stack Development</td>
+      </tr>
+      <tr>
+        <td>Sleep Sense</td>
+        <td>A model that predicts sleep disorders based on user data.</td>
+        <td>Machine Learning</td>
+      </tr>
+    </table>
+  </section>
 
-  <!-- About Section -->
-  <h2 id="about">About Me</h2>
-  <p>
-    I am a 2nd-year B.Tech student from a reputed college. I am passionate about web development and machine learning. I enjoy building real-time applications, exploring new technologies, and applying them in practical projects.
-  </p>
+  <section id="skills">
+    <h1>Skills</h1><br>
+    <div style="max-width: 800px; font-size: 1.2rem;">
+      <h4>Technical Skills</h4>
+      <ul>
+        <li>Web Development</li>
+        <li>Machine Learning</li>
+        <li>Frontend Development</li>
+        <li>UI/UX Design</li>
+        <li>Full Stack Development</li>
+      </ul><br>
 
-  <hr>
+      <h4>Programming Languages</h4>
+      <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>C</li>
+      </ul><br>
 
-  <!-- Projects Section -->
-  <h2 id="projects">Projects</h2>
-  <ul>
-    <li>
-      <strong>Market Price Tracker</strong><br>
-      <em>Tech Stack:</em> MERN (MongoDB, Express.js, React, Node.js)<br>
-      A real-time tracker that helps users monitor market prices.
-    </li><br>
-    <li>
-      <strong>GameVerse</strong><br>
-      <em>Tech Stack:</em> Full Stack Development<br>
-      A platform where multiple interactive games are organized on a single page.
-    </li><br>
-    <li>
-      <strong>Sleep Sense</strong><br>
-      <em>Tech Stack:</em> Machine Learning<br>
-      A model that predicts sleep disorders based on user data.
-    </li>
-  </ul>
+      <h4>UI/UX & Design Tools</h4>
+      <ul>
+        <li>Material UI</li>
+        <li>Figma</li>
+        <li>Canva</li>
+      </ul><br>
+    </div>
+  </section>
 
-  <hr>
+  <section id="contact">
+    <h2>Contact</h2>
+    <form action="#" method="post">
+      <input type="text" id="name" name="name" placeholder="Your Name"><br>
+      <input type="email" id="email" name="email" placeholder="Your Email"><br>
+      <textarea id="message" name="message" rows="4" placeholder="Your Message"></textarea><br>
+      <input type="submit" value="Send">
+    </form>
+  </section>
 
-  <!-- Skills Section -->
-  <h2 id="skills">Skills</h2>
-
-  <h4>Technical Skills</h4>
-  <ul>
-    <li>Web Development</li>
-    <li>Machine Learning</li>
-  </ul>
-
-  <h4>Programming Languages</h4>
-  <ul>
-    <li>Java</li>
-    <li>Python</li>
-    <li>JavaScript</li>
-    <li>C</li>
-  </ul>
-
-  <h4>UI/UX & Design Tools</h4>
-  <ul>
-    <li>Material UI</li>
-    <li>Figma</li>
-    <li>Canva</li>
-  </ul>
-
-  <hr>
-
-  <!-- Contact Section -->
-  <h2 id="contact">Contact</h2>
-  <form action="#" method="post">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name"><br><br>
-
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br><br>
-
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
-
-    <input type="submit" value="Send">
-  </form>
+  <footer>
+    &copy; 2025 Keerthika. All Rights Reserved.
+  </footer>
 
 </body>
 </html>
